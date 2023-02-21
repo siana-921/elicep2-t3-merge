@@ -8,12 +8,16 @@ const cors = require("cors");
 app.use(cors({ origin: "http://localhost:3000" }));
 
 const mongoose = require("mongoose");
+
+//strictQuery error 때문에 추가함
+mongoose.set("strictQuery", false);
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("DB연결 성공");
   })
-  .catch(() => {
+  .catch((err) => {
     console.log(err);
   });
 
