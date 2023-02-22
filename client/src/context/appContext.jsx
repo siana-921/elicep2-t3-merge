@@ -4,8 +4,6 @@ import reducer from "./reducer";
 import axios from "axios";
 
 import {
-  CLEAR_ALERT,
-  DISPLAY_ALERT,
   REGISTER_USER_BEGIN,
   REGISTER_USER_SUCCESS,
   REGISTER_USER_ERROR,
